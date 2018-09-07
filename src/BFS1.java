@@ -5,7 +5,7 @@ import java.util.Queue;
 public class BFS1 {
 	
 	public static void main(String[] args) {
-		GraphBfs graph = new GraphBfs(6);
+		GraphBfs1 graph = new GraphBfs1(6);
 		graph.insert(1, 2);
 		graph.insert(3, 1);
 		graph.insert(2, 3);
@@ -16,17 +16,18 @@ public class BFS1 {
 	}
 }
 
-class GraphBfs {
+class GraphBfs1 {
 	private ArrayList<ArrayList<Integer>> v;
 	private boolean[] visited;
 	private Queue<Integer> queue = new LinkedList<Integer>();
-	public GraphBfs(int n) {
+	public GraphBfs1(int n) {
 		v = new ArrayList<ArrayList<Integer>>(n+1);
 		for (int i=0; i<=n; i++) {
 			v.add(new ArrayList<Integer>());
 		}
 		visited = new boolean[n+1];
 		queue.add(1);
+		System.out.print(1 + " ");
 	}
 	
 	public void insert(int x, int y) {
