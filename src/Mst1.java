@@ -40,8 +40,10 @@ class GraphMst1 {
 		int L, R;
 		int answer = 0;
 		for(int i=1; i<=m; i++) {
+			// find set
 			L = get(listCls.get(i).start);
 			R = get(listCls.get(i).end);
+			// union
 			if (L != R) {
 				answer += listCls.get(i).cost;
 				parent[L] = R;
